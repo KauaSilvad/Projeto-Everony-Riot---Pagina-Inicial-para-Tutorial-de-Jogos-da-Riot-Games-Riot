@@ -1,0 +1,135 @@
+@font-face{
+    font-family: "Pridi-SemiBold";
+    src: url('Pridi/Pridi-SemiBold.ttf');
+}
+@font-face{
+    font-family: "Pridi-Bold";
+    src: url('Pridi/Pridi-Bold.ttf');
+}
+@font-face{
+    font-family: "Pridi-Regular";
+    src: url('Pridi/Pridi-Regular.ttf');
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d1a1a;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+a {
+    color: white;
+    border: none;
+    margin-left: 2vh;
+    text-decoration: none;
+}
+a:hover{
+    color: #B03336;
+}
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.centro {
+    position: relative;
+    margin-top: -30%;
+    width: 600px;
+    height: 600px;
+    opacity: 0; /* Começa com opacidade zero */
+    transition: opacity 0.5s ease; /* Transição suave de opacidade */
+}
+
+.riotname {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12em;
+    color: #B03336;
+    text-align: center;
+    white-space: nowrap;
+    text-align: center;
+    font-family: "Pridi-Bold", Helvetica;;
+}
+
+/* Seção dos cards */
+section {
+    display: flex;
+    justify-content: space-between; /* Distribui os cartões uniformemente */
+    flex-wrap: nowrap; /* Impede a quebra de linha */
+    padding: 20px;
+    background-color: #1d1a1a;
+    overflow-x: auto; /* Permite a rolagem horizontal em telas pequenas */
+    font-family: "Pridi-SemiBold", Helvetica;
+}
+
+.card {
+    background: #2c2c2c;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    width: calc(25% - 20px); /* Quatro cartões por linha */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    flex-shrink: 0; /* Impede que os cartões diminuam ao ajustar a tela */
+    font-family: "Pridi-Regular", Helvetica;
+
+}
+
+.card:hover {
+    transform: translateY(20px); /* Eleva o cartão ao passar o mouse */
+}
+
+.card__background {
+    width: 100%;
+    height: auto;
+}
+
+.card__content {
+    padding: 10px;
+    text-align: center;
+    font-family: "Pridi-Regular", Helvetica
+}
+
+.card__title {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card__button {
+    background: #B03336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.5s;
+    font-family:  "Pridi-Regular", Helvetica;
+}
+
+.card__button:hover {
+    background: #3f2121; /* Cor mais clara ao passar o mouse */
+    
+}

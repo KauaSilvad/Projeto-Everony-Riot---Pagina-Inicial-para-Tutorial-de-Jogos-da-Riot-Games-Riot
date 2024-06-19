@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everony RIOT</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="shortcut icon" href="Assests/MãoFUNDO.svg" type="image/x-icon">
+</head>
+<body class='container'>
+    <nav class="nav-bar">
+        <img class="Logo" src="Assests/Logo RIot.svg" alt="Logo da RIOT">
+        <a href="">Home</a>
+        <a href="">Sobre</a>
+        <a href="">Menu</a>  
+    </nav>
+    <main class="principal">
+        <img class="centro" id="img" src="Assests/MãoFUNDO.svg" alt="">
+        <h1 class="riotname" id="typewriter-text" data-text="RIOT GAMES"></h1>
+    </main>]
+    <section>
+        <div class="card">
+            <img
+              class="card__background"
+              src="Assests/LOL FUNDO.svg"
+              alt="League of Legends fundo com logo"
+              width="1920"
+              height="2193"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">League of legends</h2>
+              </div>
+              <button type="submit" onclick="redirectToPage()" class="card__button">Conheça</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+              class="card__background"
+              src="Assests/Valorant FUNDO.svg"
+              alt="League of Legends fundo com logo"
+              width="1920"
+              height="2193"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Valorant</h2>
+              </div>
+              <button href="HOME/" class="card__button">Conheça</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+              class="card__background"
+              src="Assests/TFT FUNDO.svg"
+              alt="League of Legends fundo com logo"
+              width="1920"
+              height="2193"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Teamfight tactics</h2>
+              </div>
+              <button class="card__button">Conheça</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+              class="card__background"
+              src="Assests/League of runeterraFUNDO.svg"
+              alt="League of Legends fundo com logo"
+              width="1920"
+              height="2193"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">League of runeterra</h2>
+              </div>
+              <button class="card__button">Conheça</button>
+            </div>
+        </div>
+    </section>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const typewriterText = document.getElementById('typewriter-text');
+    const text = typewriterText.getAttribute('data-text');
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            typewriterText.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100); // Atraso de 100ms entre cada letra
+        } else {
+            const centroImg = document.querySelector('.centro');
+            centroImg.style.opacity = '1';
+        }
+    }
+
+    // Iniciar a função de digitação após um pequeno atraso
+    setTimeout(typeWriter, 1000); // Inicia após 1 segundo (opcional)
+});
+function redirectToPage() {
+    window.location.href = 'http://127.0.0.1:5500/League%20of%20Legends.html';
+}
+
+
+    </script>
+    
+</body>
+</html>
